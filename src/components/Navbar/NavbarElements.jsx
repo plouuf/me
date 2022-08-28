@@ -3,12 +3,18 @@ import { NavLink as Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 
 export const NavContainer = styled.nav`
-  height: 100px;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  height: 5rem;
   padding: 0.5rem 10rem;
+  position: sticky;
+  top: 0;
   z-index: 10;
-`
+  background: ${({ isScroll }) => (isScroll ? '#242424' : 'transparent')};
+  /* background-color: #242424; */
+  transition: 1s all ease-in;
+`;
 
 export const NavLogoLink = styled(Link)`
   color: #fff;
@@ -21,7 +27,7 @@ export const NavLogoLink = styled(Link)`
   font-size: 1.8rem;
   letter-spacing: 0.8px;
   cursor: pointer;
-`
+`;
 
 export const NavLink = styled(Link)`
   color: #fff;
@@ -42,9 +48,9 @@ export const NavLink = styled(Link)`
 
   &:hover {
     color: #fff;
-    opacity: 100%
+    opacity: 100%;
   }
-`
+`;
 
 export const Bars = styled(FaBars)`
   display: none;
@@ -59,23 +65,23 @@ export const Bars = styled(FaBars)`
     font-size: 1.8rem;
     cursor: pointer;
   }
-`
+`;
 
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
 
   @media screen and (max-width: 768px) {
-    display: none
+    display: none;
   }
-`
+`;
 
 export const NavSocialButton = styled.nav`
   display: flex;
   align-items: center;
   margin-right: 3rem;
   margin-left: 1.3rem;
-`
+`;
 
 export const RoundNavLink = styled.a`
   text-decoration: none;
@@ -96,18 +102,18 @@ export const RoundNavLink = styled.a`
 
   &:hover {
     color: #fff;
-    opacity: 100%
+    opacity: 100%;
   }
-`
+`;
 
 export const NavButton = styled.div`
   display: flex;
   align-items: center;
 
   @media screen and (max-width: 768px) {
-    display: none
+    display: none;
   }
-`
+`;
 
 export const NavButtonLink = styled.div`
   background: #242424;
@@ -124,4 +130,4 @@ export const NavButtonLink = styled.div`
     color: #242424;
     background: #fff;
   }
-`
+`;

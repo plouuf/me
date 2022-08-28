@@ -2,12 +2,13 @@ import styled from 'styled-components';
 import Astronaut from '../../assets/astronaut.svg';
 import { NavLink as Link } from 'react-router-dom';
 
-export const HeroContainer = styled.div`
+export const HeroContainer = styled.section`
   display: flex;
   align-items: flex-start;
-  margin: 4.5rem 10rem;
-  /* background-color: red; */
-  height: 75vh;
+  margin: 2rem 10rem;
+  position: relative;
+  /* background-color: teal; */
+  height: calc(100vh - (3rem + 5rem));
 `;
 
 export const HeroWrapper = styled.div`
@@ -16,6 +17,7 @@ export const HeroWrapper = styled.div`
   align-items: center;
   grid-template-areas: 'col1 col2';
   width: 100%;
+  margin-top: 2rem;
   /* background-color: blue; */
 `;
 
@@ -24,7 +26,7 @@ export const Column1 = styled.div`
   margin-bottom: 15px;
   /* padding: 0 15px; */
   grid-area: col1;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -49,7 +51,7 @@ export const Column2 = styled.div`
 
 export const HeroHeader = styled.h1`
   font-weight: 600;
-  font-size: 38px;
+  font-size: 36px;
   margin-top: 25vh;
   letter-spacing: 1.5px;
   font-family: monospace;
@@ -141,9 +143,9 @@ export const HeroHeader = styled.h1`
 
 export const HeroText = styled.p`
   font-weight: 300;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   margin-top: 1.25rem;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 32px;
   /* background-color: yellow; */
   width: 100%;
