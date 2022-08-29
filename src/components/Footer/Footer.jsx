@@ -15,7 +15,7 @@ const Footer = () => {
       <FooterWrapper>
         <FooterLogo to="/">Portfolio</FooterLogo>
         <FooterAuthor>
-          Made with <BeatingHeart /> by ploouf
+          Built with <BeatingHeart /> by ploouf
         </FooterAuthor>
         <WebsiteRights>
           © {new Date().getFullYear()} All rights reserved.

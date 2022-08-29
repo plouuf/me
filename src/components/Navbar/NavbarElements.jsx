@@ -115,7 +115,7 @@ export const NavButton = styled.div`
   }
 `;
 
-export const NavButtonLink = styled.div`
+export const NavButtonLink = styled.p`
   background: #242424;
   border-radius: 50px;
   padding: 12px 28px;
@@ -124,6 +124,7 @@ export const NavButtonLink = styled.div`
   color: #fff;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  font-size: 0.85rem;
 
   &:hover {
     transition: all 0.2s ease-in-out;
