@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Astronaut from '../../assets/astronaut.svg';
-import { NavLink as Link } from 'react-router-dom';
+import { Link as LinkS } from 'react-scroll';
 
 export const HeroContainer = styled.section`
   display: flex;
@@ -193,7 +193,7 @@ export const HeroImage = styled.div`
   }
 `;
 
-export const HeroButton = styled(Link)`
+export const HeroButton = styled(LinkS)`
   display: flex;
   justify-content: space-evenly;
   align-items: center;

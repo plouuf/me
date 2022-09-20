@@ -27,7 +27,10 @@ const HeroSection = () => {
           <HeroImage />
         </Column1>
         <Column2>
-          <HeroHeader>Hello, my name is <span style={{font: 'inherit', color: '#7ab1ff'}}>Hans</span> 👋</HeroHeader>
+          <HeroHeader>
+            Hello, my name is{' '}
+            <span style={{ font: 'inherit', color: '#7ab1ff' }}>Hans</span> 👋
+          </HeroHeader>
           <HeroText>
             Welcome to my portfolio! I am a Junior Software Developer who enjoys
             building creative things that live on the web.
@@ -35,7 +38,10 @@ const HeroSection = () => {
           <HeroButton
             onMouseEnter={handleMouseHover}
             onMouseLeave={handleMouseHover}
-            to="/about"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-95}
           >
             Learn More {hover ? <AiOutlineArrowRight /> : <IoIosArrowForward />}
           </HeroButton>

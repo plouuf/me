@@ -1,9 +1,9 @@
 import React from 'react'
 import { InfoContainer } from './InfoSectionElements'
 
-const InfoSection = ({title}) => {
+const InfoSection = ({id, title}) => {
   return (
-    <InfoContainer id="about">
+    <InfoContainer id={id}>
       <p>{title}</p>
     </InfoContainer>
   )

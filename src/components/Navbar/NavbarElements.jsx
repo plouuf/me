@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NavLink as Link } from 'react-router-dom';
+import { Link as LinkS } from 'react-scroll';
 import { FaBars } from 'react-icons/fa';
 
 export const NavContainer = styled.nav`
@@ -11,12 +11,13 @@ export const NavContainer = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-  background: ${({ isScroll }) => (isScroll ? '#242424' : 'transparent')};
+  background: ${({ isScroll }) => (isScroll ? 'rgba(36,36,36,0.75)' : 'transparent')};
+  backdrop-filter: blur(20px);
   /* background-color: #242424; */
-  transition: 1s all ease-in;
+  transition: 0.8s all ease-in;
 `;
 
-export const NavLogoLink = styled(Link)`
+export const NavLogoLink = styled(LinkS)`
   color: #fff;
   display: flex;
   align-items: center;
@@ -29,7 +30,7 @@ export const NavLogoLink = styled(Link)`
   cursor: pointer;
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled(LinkS)`
   color: #fff;
   display: flex;
   opacity: 55%;
@@ -40,6 +41,7 @@ export const NavLink = styled(Link)`
   height: 100%;
   letter-spacing: 0.8px;
   cursor: pointer;
+  transition: 0.1s ease;
 
   &.active {
     color: #fff;

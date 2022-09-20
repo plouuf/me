@@ -11,9 +11,9 @@ const App = () => {
     <Router>
       <Navbar />
       <HeroSection />
-      <InfoSection title={'About Me'} />
-      <InfoSection title={'Skills'} />
-      <InfoSection title={'Projects'} />
+      <InfoSection id={"about"} title={'About Me'} />
+      <InfoSection id={"skills"} title={'Skills'} />
+      <InfoSection id={"projects"} title={'Projects'} />
       <Footer />
     </Router>
   )

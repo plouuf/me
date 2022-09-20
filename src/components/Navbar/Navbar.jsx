@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   NavContainer,
   NavLink,
@@ -15,29 +15,40 @@ import { FiGithub } from 'react-icons/fi';
 import { FaLinkedinIn } from 'react-icons/fa';
 
 const Navbar = () => {
-
   const [isScroll, setIsScroll] = useState(false);
 
   const navbarTransparencyHandler = () => {
-    if (window.scrollY >= 85) {
+    if (window.scrollY >= 80) {
       setIsScroll(true);
     } else {
       setIsScroll(false);
     }
-  }
+  };
 
   useEffect(() => {
-    window.addEventListener('scroll', navbarTransparencyHandler)
-  }, [])
+    window.addEventListener('scroll', navbarTransparencyHandler);
+
+    return () => {
+      window.removeEventListener('scroll', navbarTransparencyHandler);
+    };
+  }, []);
 
   return (
     <NavContainer isScroll={isScroll}>
-      <NavLogoLink to="/">Portfolio</NavLogoLink>
+      <NavLogoLink to="home" spy={true} smooth={true} offset={-95}>
+        Portfolio
+      </NavLogoLink>
       {/* <Bars /> */}
       <NavMenu>
-        <NavLink to="/about">About Me</NavLink>
-        <NavLink to="/skills">Skills</NavLink>
-        <NavLink to="/projects">Projects</NavLink>
+        <NavLink to="about" spy={true} smooth={true} offset={-95}>
+          About Me
+        </NavLink>
+        <NavLink to="skills" spy={true} smooth={true} offset={-95}>
+          Skills
+        </NavLink>
+        <NavLink to="projects" spy={true} smooth={true} offset={-95}>
+          Projects
+        </NavLink>
         <NavSocialButton>
           <RoundNavLink
             href="https://www.linkedin.com/in/htsramasamy/"
