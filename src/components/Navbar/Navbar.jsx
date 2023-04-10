@@ -16,6 +16,7 @@ import { FaLinkedinIn } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
+  const offsetY = -95;
 
   const navbarTransparencyHandler = () => {
     if (window.scrollY >= 80) {
@@ -35,18 +36,15 @@ const Navbar = () => {
 
   return (
     <NavContainer isScroll={isScroll}>
-      <NavLogoLink to="home" spy={true} smooth={true} offset={-95}>
+      <NavLogoLink to="home" spy={true} smooth={true} offset={offsetY}>
         Portfolio
       </NavLogoLink>
       {/* <Bars /> */}
       <NavMenu>
-        <NavLink to="about" spy={true} smooth={true} offset={-95}>
+        <NavLink to="about" spy={true} smooth={true} offset={offsetY}>
           About Me
         </NavLink>
-        <NavLink to="skills" spy={true} smooth={true} offset={-95}>
-          Skills
-        </NavLink>
-        <NavLink to="projects" spy={true} smooth={true} offset={-95}>
+        <NavLink to="projects" spy={true} smooth={true} offset={offsetY}>
           Projects
         </NavLink>
         <NavSocialButton>

@@ -11,8 +11,8 @@ export const NavContainer = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-  background: ${({ isScroll }) => (isScroll ? 'rgba(36,36,36,0.75)' : 'transparent')};
-  backdrop-filter: blur(20px);
+  background: ${({ isScroll }) => (isScroll ? 'rgba(36,36,36,0.75)' : 'rgba(36,36,36,0.15)')};
+  backdrop-filter: blur(25px);
   /* background-color: #242424; */
   transition: 0.8s all ease-in;
 `;
@@ -42,6 +42,7 @@ export const NavLink = styled(LinkS)`
   letter-spacing: 0.8px;
   cursor: pointer;
   transition: 0.1s ease;
+  font-size: 0.94rem;
 
   &.active {
     color: #fff;
@@ -124,6 +125,7 @@ export const NavButtonLink = styled.p`
   border: 1px solid #fff;
   text-decoration: none;
   color: #fff;
+  opacity: 75%;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   font-size: 0.85rem;
@@ -132,5 +134,6 @@ export const NavButtonLink = styled.p`
     transition: all 0.2s ease-in-out;
     color: #242424;
     background: #fff;
+    opacity: 100%;
   }
 `;

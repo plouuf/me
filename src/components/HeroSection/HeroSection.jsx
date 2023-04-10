@@ -29,11 +29,11 @@ const HeroSection = () => {
         <Column2>
           <HeroHeader>
             Hello, my name is{' '}
-            <span style={{ font: 'inherit', color: '#7ab1ff' }}>Hans</span> 👋
+            <span style={{ font: 'inherit', color: '#0fb8f6' }}>Hans</span>
           </HeroHeader>
           <HeroText>
             Welcome to my portfolio! I am a Junior Software Developer who enjoys
-            building creative things that live on the web.
+            building creative things that live on the web or on my machine <span style={{ fontSize: '1.25rem'}}>😅</span>
           </HeroText>
           <HeroButton
             onMouseEnter={handleMouseHover}

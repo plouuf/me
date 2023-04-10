@@ -5,10 +5,11 @@ import { Link as LinkS } from 'react-scroll';
 export const HeroContainer = styled.section`
   display: flex;
   align-items: flex-start;
-  margin: 2rem 10rem;
+  margin: 0rem 10rem;
   position: relative;
   /* background-color: teal; */
-  height: calc(100vh - (3rem + 5rem));
+  /* height: auto; */
+  height: calc(100vh - (5rem + 5rem));
 `;
 
 export const HeroWrapper = styled.div`
@@ -51,7 +52,7 @@ export const Column2 = styled.div`
 
 export const HeroHeader = styled.h1`
   font-weight: 600;
-  font-size: 36px;
+  font-size: 2rem;
   margin-top: 25vh;
   letter-spacing: 1.5px;
   font-family: monospace;
@@ -145,17 +146,20 @@ export const HeroText = styled.p`
   font-weight: 300;
   letter-spacing: 0.8px;
   margin-top: 1.25rem;
-  font-size: 16px;
-  line-height: 32px;
+  font-size: 0.94rem;
+  line-height: 1.5;
+  font-weight: 300;
   /* background-color: yellow; */
-  width: 100%;
+  /* color: #aaa; */
+  /* width: 100%; */
+  max-width: 90%;
   opacity: 0;
   transform: translateY(2.5rem);
   animation: fadeInUp 0.5s ease 2.1s forwards;
 
   @keyframes fadeInUp {
     to {
-      opacity: 75%;
+      opacity: 55%;
       transform: translateY(0);
     }
   }
@@ -168,9 +172,9 @@ export const HeroImage = styled.div`
   background-repeat: no-repeat;
   width: 510px;
   height: 460px;
-  margin-top: 6vh;
+  margin-top: 2.5vh;
   opacity: 0%;
-  animation: fadeIn 0.4s ease-in forwards, bottom-to-top 4s ease-in-out infinite;
+  animation: fadeIn 0.4s ease-in forwards, bottom-to-top 5s ease-in-out infinite;
 
   @keyframes bottom-to-top {
     0% {
@@ -195,12 +199,13 @@ export const HeroImage = styled.div`
 
 export const HeroButton = styled(LinkS)`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  width: 12rem;
+  width: 10rem;
   border-radius: 50px;
   margin: 2rem 0;
-  padding: 12px 24px;
+  font-size: 0.94rem;
+  padding: 12px 28px;
   border: 1px solid #fff;
   text-decoration: none;
   color: #fff;
@@ -219,7 +224,7 @@ export const HeroButton = styled(LinkS)`
 
   @keyframes fadeInUp {
     to {
-      opacity: 100%;
+      opacity: 80%;
       transform: translateY(0);
     }
   }
