@@ -108,16 +108,33 @@ const InfoSection = ({ id }) => {
           )}
           {active === ACTIVITIES && (
             <InfoText>
-              <br />
-              • laba em
-              <br />
-              <br />
-              • 
-              <br />
-              <br />
-              • 
-              <br />
-              <br />
+              <JobHeader
+                location={'HackfrostNL'}
+                date={'March 2023'}
+              />
+              <InfoText>
+                <br />
+                • Attended and made it to the Top 9 teams.
+                <br />
+              </InfoText>
+              <JobHeader
+                location={'HackfrostNL'}
+                date={'Feb 2021'}
+              />
+              <InfoText>
+                <br />
+                • Attended, networked and gained experience with new technologies such as Jupyter Notebook, AWS and WebFlows.
+                <br />
+              </InfoText>
+              <JobHeader
+                location={'Avalon Holographics'}
+                date={'May 2019'}
+              />
+              <InfoText>
+                <br />
+                • Volunteered as test subject to observe how to prevent collision of satellites in 3D.
+                <br />
+              </InfoText>
             </InfoText>
           )}
         </Column1>

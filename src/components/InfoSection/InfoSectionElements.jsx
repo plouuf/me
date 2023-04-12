@@ -148,13 +148,13 @@ export const JobHeader = ({ job, location, date }) => {
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '100%',
-        marginTop: 20
+        marginTop: 20,
       }}
     >
       <div>
-        <span style={{ fontWeight: 600 }}>
-          { job } @
-        </span>
+        {job && (
+          <span style={{ fontWeight: 600 }}>{job} @</span>
+        )}
         <span
           style={{
             fontWeight: 600,
@@ -162,12 +162,10 @@ export const JobHeader = ({ job, location, date }) => {
             marginLeft: 5,
           }}
         >
-          { location }
+         {location}
         </span>
       </div>
-      <span style={{ opacity: '50%', fontSize: '0.8rem' }}>
-        { date }
-      </span>
+      <span style={{ opacity: '50%', fontSize: '0.8rem' }}>{date}</span>
     </div>
   );
 };
