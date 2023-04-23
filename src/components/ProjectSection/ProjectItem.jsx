@@ -48,7 +48,7 @@ const ProjectItem = ({
           </ProjectContent>
 
           <ProjectImageContainer imgStart={imgStart}>
-            <ProjectImage src={image} alt="" />
+            <ProjectImage src={image} alt=""/>
           </ProjectImageContainer>
         </Project>
       </ProjectContainer>

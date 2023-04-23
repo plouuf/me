@@ -86,24 +86,6 @@ const InfoSection = ({ id }) => {
                 <br />
                 <br />
               </InfoText>
-              <JobHeader
-                job={'Survey Taker'}
-                location={'BVA Datacall'}
-                date={'Oct 2017 - Dec 2017'}
-              />
-              <InfoText>
-                <br />
-                • Used strong and eloquent speaking skills in delivering
-                questions to survey participants by phone and prompting
-                responses to complete questionnaires.
-                <br />
-                <br />
-                • Entered responses from survey participants for target
-                companies into internal database to later compile reports or
-                conduct analysis.
-                <br />
-                <br />
-              </InfoText>
             </>
           )}
           {active === ACTIVITIES && (

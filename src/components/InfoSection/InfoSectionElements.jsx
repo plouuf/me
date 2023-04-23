@@ -126,6 +126,7 @@ export const InfoSectionMenuItem = styled.div`
   background: ${({ active }) => (active ? `#5a5a5a` : `inherit`)};
 
   transition: ease-in-out all;
+  cursor: pointer;
 
   &:hover {
     transition: all 0.2s ease-in-out;

@@ -73,27 +73,34 @@ export const ProjectImageContainer = styled.div`
   position: relative;
   z-index: 0;
   /* background-color: #4e74a9; */
-  /* background: linear-gradient(0.4turn, #8fbdfd, #4e74a9); */
+  /* background: linear-gradient(to bottom right, #0fb8f6, #48c5d0); */
   border-radius: 2px;
   grid-column: 6 / -1; //////change to 1 / 7
   grid-column: ${({ imgStart }) => (imgStart ? `1 / 8` : `6 / -1`)};
 
   grid-row: 1 / -1;
-  width: 100%;
-  height: 100%;
+  width: 32rem;
+  height: 26rem;
 
   @media screen and (max-width: 768px) {
     height: 100%;
+  }
+
+  &:hover {
+    /* filter: none; */
+    /* background: none; */
   }
 `;
 
 export const ProjectImage = styled.img`
   width: 100%;
   max-width: 100%;
+  height: 100%;
   vertical-align: middle;
   border-radius: 2px;
   position: relative;
-  /* filter: grayscale(50%) contrast(1); */
+  /* filter: grayscale(75%) contrast(1); */
+  mix-blend-mode: multiply;
   transition: 0.15s ease-in;
 
   @media screen and (max-width: 768px) {
