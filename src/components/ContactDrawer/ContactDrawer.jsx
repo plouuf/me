@@ -1,24 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Drawer, Form, Input } from 'antd';
 import { CloseOutlined } from '@ant-design/icons';
 import { DrawerSubmit } from '../Navbar/NavbarElements';
-import ContactImage from '../../assets/contact.svg';
-
-const ImageWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40vh;
-`;
-
-const StyledContactImage = styled.img`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2.5rem 0 5rem 0;
-  width: 75%;
-`;
+import ContactImageSVG from '../../assets/contact.svg';
+import { ContactImageWrapper, ContactImage } from './ContactDrawerElements';
 
 const ContactDrawer = ({ isOpen, handleDrawer }) => {
   const [form] = Form.useForm();
@@ -46,9 +31,9 @@ const ContactDrawer = ({ isOpen, handleDrawer }) => {
       width={450}
       closeIcon={<CloseOutlined style={{ color: '#fff' }} />}
     >
-      <ImageWrapper>
-        <StyledContactImage src={ContactImage} alt="contact" />
-      </ImageWrapper>
+      <ContactImageWrapper>
+        <ContactImage src={ContactImageSVG} alt="contact" />
+      </ContactImageWrapper>
       <Form
         form={form}
         onFinish={onFinish}
