@@ -1,38 +1,106 @@
-// import React from 'react';
-// import {
-//   Drawer,
-//   DrawerBody,
-//   // DrawerFooter,
-//   DrawerHeader,
-//   DrawerOverlay,
-//   DrawerContent,
-//   DrawerCloseButton,
-// } from '@chakra-ui/react';
+import React from 'react';
+import styled from 'styled-components';
+import { Drawer, Form, Input } from 'antd';
+import { CloseOutlined } from '@ant-design/icons';
+import { DrawerSubmit } from '../Navbar/NavbarElements';
+import ContactImage from '../../assets/contact.svg';
 
-// const ContactDrawer = ({ onClose, isOpen, size='md'}) => {
+const ImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+`;
 
-//   return (
-//     <>
-//       <Drawer onClose={onClose} isOpen={isOpen} size={size}>
-//         <DrawerOverlay />
-//         <DrawerContent>
-//           <DrawerCloseButton />
-//           <DrawerHeader>{`${size} drawer contents`}</DrawerHeader>
-//           <DrawerBody>
-//             <p>
-//               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-//               eiusmod tempor incididunt ut labore et dolore magna aliqua.
-//               Consequat nisl vel pretium lectus quam id. Semper quis lectus
-//               nulla at volutpat diam ut venenatis. Dolor morbi non arcu risus
-//               quis varius quam quisque. Massa ultricies mi quis hendrerit dolor
-//               magna eget est lorem. Erat imperdiet sed euismod nisi porta.
-//               Lectus vestibulum mattis ullamcorper velit.
-//             </p>
-//           </DrawerBody>
-//         </DrawerContent>
-//       </Drawer>
-//     </>
-//   );
-// };
+const StyledContactImage = styled.img`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem 0 5rem 0;
+  width: 75%;
+`;
 
-// export default ContactDrawer;
+const ContactDrawer = ({ isOpen, handleDrawer }) => {
+  const [form] = Form.useForm();
+
+  const onFinish = (values) => {
+    console.log('Received values:', values);
+    form.resetFields();
+  };
+
+  const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo);
+  };
+
+  return (
+    <Drawer
+      title={
+        <p style={{ color: '#ffffff', fontWeight: 600, opacity: '90%' }}>
+          Contact Me
+        </p>
+      }
+      placement="right"
+      onClose={handleDrawer}
+      open={isOpen}
+      style={{ background: '#242424', color: '#ffffff' }}
+      width={450}
+      closeIcon={<CloseOutlined style={{ color: '#fff' }} />}
+    >
+      <ImageWrapper>
+        <StyledContactImage src={ContactImage} alt="contact" />
+      </ImageWrapper>
+      <Form
+        form={form}
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
+        labelCol={{ span: 5, style: { color: '#ffffff', opacity: '75%' } }}
+      >
+        <Form.Item
+          label={<span style={{ color: '#ffffff', opacity: '75%' }}>Name</span>}
+          // label="Name"
+          name="name"
+          rules={[{ required: true, message: 'Please enter your name' }]}
+          style={{ paddingBottom: '1.5rem' }}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          // label="Email"
+          label={
+            <span style={{ color: '#ffffff', opacity: '75%' }}>Email</span>
+          }
+          name="email"
+          rules={[
+            {
+              type: 'email',
+              required: true,
+              message: 'Please enter a valid email address',
+            },
+          ]}
+          style={{ paddingBottom: '1.5rem' }}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label={
+            <span style={{ color: '#ffffff', opacity: '75%' }}>Message</span>
+          }
+          // label="Message"
+          name="message"
+          rules={[{ required: true, message: 'Please enter a message' }]}
+          style={{ paddingBottom: '1.5rem' }}
+        >
+          <Input.TextArea rows={4} />
+        </Form.Item>
+
+        <Form.Item wrapperCol={{ offset: 5, span: 16 }}>
+          <DrawerSubmit htmlType="submit">Send</DrawerSubmit>
+        </Form.Item>
+      </Form>
+    </Drawer>
+  );
+};
+
+export default ContactDrawer;

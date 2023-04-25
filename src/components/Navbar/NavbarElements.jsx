@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link as LinkS } from 'react-scroll';
 import { FaBars } from 'react-icons/fa';
+import { Button } from 'antd';
 
 export const NavContainer = styled.nav`
   display: flex;
@@ -137,3 +138,26 @@ export const NavButtonLink = styled.p`
     opacity: 100%;
   }
 `;
+
+export const DrawerSubmit = styled(Button)`
+  display: flex;
+  align-items: center;
+  background: #242424;
+  height: 3rem;
+  border-radius: 50px;
+  padding: 12px 28px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  opacity: 75%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.85rem;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: #242424;
+    background: #fff;
+    opacity: 100%;
+  }
+`

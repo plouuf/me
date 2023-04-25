@@ -21,7 +21,7 @@ export const data = [
   {
     label: 'Featured Project',
     title: 'Keyrupt',
-    details: "Keyrupt a macOS app, with it's keyboard freezing function, you can clean your keyboard without worrying about accidentally pressing any keys. And with its snippet autocompletion feature, you can quickly insert frequently used phrases or links into your text with just a few keystrokes.",
+    details: "Keyrupt a menu bar app for macOS, with it's keyboard freezing function, you can clean your keyboard without worrying about accidentally pressing any keys. And with its snippet autocompletion feature, you can quickly insert frequently used phrases or links into your text with just a few keystrokes.",
     technologies: [
       'Swift',
       'SwiftUI'
@@ -46,7 +46,7 @@ export const data = [
   {
     label: 'Featured Project',
     title: 'Blokus',
-    details: "This Java-based board game features an AI opponent and accommodates those with color deficiency vision. Enjoy the challenge of playing against an AI opponent, while knowing that the game's color scheme is designed to be inclusive and accessible to all.",
+    details: "This Java-based board game features an AI opponent and accommodates those with color deficiency vision. It also has a save and load functionality",
     technologies: [
       'Java'
     ],

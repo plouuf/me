@@ -13,12 +13,9 @@ const ProjectSection = ({ id, data }) => {
           technologies={project.technologies}
           imgStart={project.imgStart}
           image={project.image}
+          key={project.title}
         />
       ))}
-      {/* <ProjectItem imgStart={true} />
-      <ProjectItem />
-      <ProjectItem imgStart={true} />
-      <ProjectItem /> */}
     </ProjectContainer>
   );
 };
