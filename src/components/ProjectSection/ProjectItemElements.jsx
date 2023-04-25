@@ -113,3 +113,12 @@ export const ProjectImage = styled.img`
     /* filter: none; */
   }
 `;
+
+export const ProjectIconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: ${({ imgStart }) => (imgStart ? `flex-end` : `flex-start`)};
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+`;

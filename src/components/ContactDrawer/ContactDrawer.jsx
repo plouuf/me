@@ -27,7 +27,7 @@ const ContactDrawer = ({ isOpen, handleDrawer }) => {
       placement="right"
       onClose={handleDrawer}
       open={isOpen}
-      style={{ background: '#242424', color: '#ffffff' }}
+      style={{ background: '#282828', color: '#ffffff' }}
       width={450}
       closeIcon={<CloseOutlined style={{ color: '#fff' }} />}
     >

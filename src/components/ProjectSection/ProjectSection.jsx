@@ -3,6 +3,7 @@ import { ProjectContainer } from './ProjectSectionElements';
 import ProjectItem from '../ProjectSection/ProjectItem';
 
 const ProjectSection = ({ id, data }) => {
+
   return (
     <ProjectContainer id={id}>
       {data.map((project) => (
@@ -13,6 +14,8 @@ const ProjectSection = ({ id, data }) => {
           technologies={project.technologies}
           imgStart={project.imgStart}
           image={project.image}
+          githubRepo={project.githubRepo}
+          externalLink={project.externalLink}
           key={project.title}
         />
       ))}
