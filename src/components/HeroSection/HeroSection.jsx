@@ -32,7 +32,7 @@ const HeroSection = () => {
             <span style={{ font: 'inherit', color: '#0fb8f6' }}>Hans</span>
           </HeroHeader>
           <HeroText>
-            Welcome to my portfolio! I am a Junior Software Developer who enjoys
+            Welcome to my portfolio! I am a Software Developer who enjoys
             building creative things that live on the web or on my machine <span style={{ fontSize: '1.25rem'}}>😅</span>
           </HeroText>
           <HeroButton

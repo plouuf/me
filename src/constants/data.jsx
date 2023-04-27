@@ -16,8 +16,8 @@ export const data = [
     ],
     image: Soon,
     imgStart: true,
-    githubRepo: '/',
-    externalLink: '/'
+    // githubRepo: '/',
+    // externalLink: '/'
   },
   {
     label: 'Featured Project',
