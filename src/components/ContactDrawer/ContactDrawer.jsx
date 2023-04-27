@@ -4,12 +4,32 @@ import { CloseOutlined } from '@ant-design/icons';
 import { DrawerSubmit } from '../Navbar/NavbarElements';
 import ContactImageSVG from '../../assets/contact.svg';
 import { ContactImageWrapper, ContactImage } from './ContactDrawerElements';
+import emailjs from 'emailjs-com';
 
 const ContactDrawer = ({ isOpen, handleDrawer }) => {
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
     console.log('Received values:', values);
+    emailjs
+      .send(
+        'service_tknw0zb',
+        'template_quqm7n7',
+        {
+          from_name: values.name,
+          from_email: values.email,
+          message: values.message,
+        },
+        `${process.env.REACT_APP_USER_ID}`
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     form.resetFields();
   };
 
