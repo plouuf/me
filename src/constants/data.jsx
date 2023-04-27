@@ -7,12 +7,11 @@ export const data = [
   {
     label: 'Featured Project',
     title: 'Discoverify',
-    details: "Discoverify is a music discovery app that uses machine learning to recommend new songs based on your listening history and preferences. Log in with your Spotify account, search for songs or artists, and play them directly in your Spotify app or web player.",
+    details: "Discoverify is a music discovery app to recommend new songs based on your listening history and preferences. Log in with your Spotify account, search for songs or artists, and play them directly in your Spotify app or web player.",
     technologies: [
       'Next.js',
       'React',
       'Node.js',
-      'Python'
     ],
     image: Soon,
     imgStart: true,
