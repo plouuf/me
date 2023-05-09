@@ -12,10 +12,15 @@ export const NavContainer = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-  background: ${({ isScroll }) => (isScroll ? 'rgba(36,36,36,0.75)' : 'rgba(36,36,36,0.15)')};
+  background: ${({ isScroll }) =>
+    isScroll ? 'rgba(36,36,36,0.75)' : 'rgba(36,36,36,0.15)'};
   backdrop-filter: blur(25px);
   /* background-color: #242424; */
   transition: 0.8s all ease-in;
+
+  @media screen and (max-width: 1024px) {
+    padding: 0.5rem 2rem;
+  }
 `;
 
 export const NavLogoLink = styled(LinkS)`
@@ -60,12 +65,12 @@ export const Bars = styled(FaBars)`
   display: none;
   color: #fff;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 75%);
+    transform: translate(-100%, 80%);
     font-size: 1.8rem;
     cursor: pointer;
   }
@@ -75,7 +80,7 @@ export const NavMenu = styled.div`
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;
@@ -114,7 +119,7 @@ export const NavButton = styled.div`
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;
@@ -160,4 +165,4 @@ export const DrawerSubmit = styled(Button)`
     background: #fff;
     opacity: 100%;
   }
-`
+`;

@@ -79,7 +79,7 @@ export const ProjectImageContainer = styled.div`
   grid-column: ${({ imgStart }) => (imgStart ? `1 / 8` : `6 / -1`)};
 
   grid-row: 1 / -1;
-  width: 32rem;
+  width: 34rem;
   height: 26rem;
 
   @media screen and (max-width: 768px) {

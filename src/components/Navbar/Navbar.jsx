@@ -3,7 +3,7 @@ import {
   NavContainer,
   NavLink,
   NavLogoLink,
-  // Bars,
+  Bars,
   NavMenu,
   NavSocialButton,
   RoundNavLink,
@@ -49,7 +49,7 @@ const Navbar = () => {
         <NavLogoLink to="home" spy={true} smooth={true} offset={offsetY}>
           Portfolio
         </NavLogoLink>
-        {/* <Bars /> */}
+        <Bars />
         <NavMenu>
           <NavLink to="about" spy={true} smooth={true} offset={offsetY}>
             About Me
