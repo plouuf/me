@@ -74,15 +74,37 @@ const InfoSection = ({ id }) => {
                 date={'Sept 2021 - Apr 2022'}
               />
               <InfoText>
-                <br />
+                {/* <br />
                 • Designed, developed and modified 5 product features using
                 React frontend and Node TypeScript backend with AWS.
                 <br />
                 <br />
-                • Wrote python scripts as internal tools, participated in code reviews, bug fixing and testing.
+                • Wrote python scripts as internal tools, participated in code
+                reviews, bug fixing and testing.
                 <br />
                 <br />
                 • Ensure quarterly goals are met using the OKR framework.
+                <br /> */}
+                <br />
+                Implemented features from planning to design to
+                production release, collaborating closely with the business team
+                to ensure requirements were met.
+                <br />
+                <br />
+                Utilized React for the
+                frontend and Node TypeScript backend with AWS for the
+                implementation, resulting in a highly performant and scalable
+                application.
+                <br />
+                <br />
+                Wrote Python scripts as internal tools to
+                automate repetitive tasks and streamline the development
+                process.
+                <br />
+                <br />
+                Ensured quarterly goals were met by leveraging the
+                OKR framework to prioritize and track progress on key
+                objectives.
                 <br />
                 <br />
               </InfoText>
@@ -90,31 +112,24 @@ const InfoSection = ({ id }) => {
           )}
           {active === ACTIVITIES && (
             <InfoText>
-              <JobHeader
-                location={'HackfrostNL'}
-                date={'March 2023'}
-              />
+              <JobHeader location={'HackfrostNL'} date={'March 2023'} />
               <InfoText>
                 <br />
                 • Attended and made it to the Top 9 teams.
                 <br />
               </InfoText>
-              <JobHeader
-                location={'HackfrostNL'}
-                date={'Feb 2021'}
-              />
+              <JobHeader location={'HackfrostNL'} date={'Feb 2021'} />
               <InfoText>
                 <br />
-                • Attended, networked and gained experience with new technologies such as Jupyter Notebook, AWS and WebFlows.
+                • Attended, networked and gained experience with new
+                technologies such as Jupyter Notebook, AWS and WebFlows.
                 <br />
               </InfoText>
-              <JobHeader
-                location={'Avalon Holographics'}
-                date={'May 2019'}
-              />
+              <JobHeader location={'Avalon Holographics'} date={'May 2019'} />
               <InfoText>
                 <br />
-                • Volunteered as test subject to observe how to prevent collision of satellites in 3D.
+                • Volunteered as test subject to observe how to prevent
+                collision of satellites in 3D.
                 <br />
               </InfoText>
             </InfoText>
