@@ -45,9 +45,10 @@ const InfoSection = ({ id }) => {
           {active === ABOUT && (
             <>
               <InfoText>
-                I am currently a computer science student at Memorial University
-                of Newfoundland. I have a huge interest for Web Development,
-                Cyber Security and AI. I also love space and penguins.
+                I have recently completed my studies at Memorial University of
+                Newfoundland, where I majored in Computer Science. I have a huge
+                interest for Web Development, Cyber Security and AI. I also love
+                space and penguins.
                 <br />
                 <br /> I am enthusiastic with attention to detail and excellent
                 organizational skills. Motivated to learn, grow and excel in the
@@ -74,37 +75,19 @@ const InfoSection = ({ id }) => {
                 date={'Sept 2021 - Apr 2022'}
               />
               <InfoText>
-                {/* <br />
-                • Designed, developed and modified 5 product features using
-                React frontend and Node TypeScript backend with AWS.
+                <br />
+                Implemented features from planning to design to production
+                release, collaborating closely with the business and development
+                team to ensure requirements were met.
                 <br />
                 <br />
-                • Wrote python scripts as internal tools, participated in code
-                reviews, bug fixing and testing.
+                Utilized React for the frontend and Node TypeScript backend with
+                AWS for the implementation, resulting in a highly performant and
+                scalable application.
                 <br />
                 <br />
-                • Ensure quarterly goals are met using the OKR framework.
-                <br /> */}
-                <br />
-                Implemented features from planning to design to
-                production release, collaborating closely with the business team
-                to ensure requirements were met.
-                <br />
-                <br />
-                Utilized React for the
-                frontend and Node TypeScript backend with AWS for the
-                implementation, resulting in a highly performant and scalable
-                application.
-                <br />
-                <br />
-                Wrote Python scripts as internal tools to
-                automate repetitive tasks and streamline the development
-                process.
-                <br />
-                <br />
-                Ensured quarterly goals were met by leveraging the
-                OKR framework to prioritize and track progress on key
-                objectives.
+                Wrote Python scripts as internal tools to automate repetitive
+                tasks and streamline the development process.
                 <br />
                 <br />
               </InfoText>

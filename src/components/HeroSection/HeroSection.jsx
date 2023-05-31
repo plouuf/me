@@ -33,7 +33,8 @@ const HeroSection = () => {
           </HeroHeader>
           <HeroText>
             Welcome to my portfolio! I am a Software Developer who enjoys
-            building creative things that live on the web or on my machine <span style={{ fontSize: '1.25rem'}}>😅</span>
+            building creative things that live on the web or on my machine{' '}
+            <span style={{ fontSize: '1.25rem', wordBreak: 'none' }}>😅</span>
           </HeroText>
           <HeroButton
             onMouseEnter={handleMouseHover}

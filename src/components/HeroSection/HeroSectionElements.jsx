@@ -152,7 +152,7 @@ export const HeroText = styled.p`
   /* background-color: yellow; */
   /* color: #aaa; */
   /* width: 100%; */
-  max-width: 90%;
+  max-width: 88%;
   opacity: 0;
   transform: translateY(2.5rem);
   animation: fadeInUp 0.5s ease 2.1s forwards;
