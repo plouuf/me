@@ -13,7 +13,7 @@ import {
 import { IoIosArrowForward } from 'react-icons/io';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 
-const HeroSection = () => {
+const HeroSection = ({ id }) => {
   const [hover, setHover] = useState(false);
 
   const handleMouseHover = () => {
@@ -21,7 +21,7 @@ const HeroSection = () => {
   };
 
   return (
-    <HeroContainer id="home">
+    <HeroContainer id={id}>
       <HeroWrapper>
         <Column1>
           <HeroImage />

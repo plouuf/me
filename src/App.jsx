@@ -12,7 +12,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <HeroSection />
+      <HeroSection id={'home'} />
       <InfoSection id={'about'} />
       <ProjectSection id={'projects'} data={data} />
       <Footer />
