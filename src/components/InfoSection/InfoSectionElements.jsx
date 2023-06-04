@@ -154,13 +154,12 @@ export const JobHeader = ({ job, location, date }) => {
     >
       <div>
         {job && (
-          <span style={{ fontWeight: 600 }}>{job} @</span>
+          <span style={{ fontWeight: 600, marginRight: 5 }}>{job} @</span>
         )}
         <span
           style={{
             fontWeight: 600,
-            color: '#0fb8f6',
-            marginLeft: 5,
+            color: '#0fb8f6'
           }}
         >
          {location}

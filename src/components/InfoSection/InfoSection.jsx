@@ -70,7 +70,7 @@ const InfoSection = ({ id }) => {
           {active === EXPERIENCE && (
             <>
               <JobHeader
-                job={'Full Stack Developer (Internship)'}
+                job={'Full Stack Developer (Co-op)'}
                 location={'totaliQ'}
                 date={'Sept 2021 - Apr 2022'}
               />
@@ -98,20 +98,20 @@ const InfoSection = ({ id }) => {
               <JobHeader location={'HackfrostNL'} date={'March 2023'} />
               <InfoText>
                 <br />
-                • Attended and made it to the Top 9 teams.
+                Attended and made it to the Top 9 teams.
                 <br />
               </InfoText>
               <JobHeader location={'HackfrostNL'} date={'Feb 2021'} />
               <InfoText>
                 <br />
-                • Attended, networked and gained experience with new
+                Attended, networked and gained experience with new
                 technologies such as Jupyter Notebook, AWS and WebFlows.
                 <br />
               </InfoText>
               <JobHeader location={'Avalon Holographics'} date={'May 2019'} />
               <InfoText>
                 <br />
-                • Volunteered as test subject to observe how to prevent
+                Volunteered as test subject to observe how to prevent
                 collision of satellites in 3D.
                 <br />
               </InfoText>
