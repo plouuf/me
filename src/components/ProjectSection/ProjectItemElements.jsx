@@ -80,7 +80,7 @@ export const ProjectImageContainer = styled.div`
 
   grid-row: 1 / -1;
   width: 34rem;
-  height: 26rem;
+  height: 22rem;
 
   @media screen and (max-width: 768px) {
     height: 100%;
@@ -102,6 +102,7 @@ export const ProjectImage = styled.img`
   /* filter: grayscale(75%) contrast(1); */
   mix-blend-mode: multiply;
   transition: 0.15s ease-in;
+  /* object-fit: cover; */
 
   @media screen and (max-width: 768px) {
     object-fit: cover;

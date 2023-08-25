@@ -1,15 +1,15 @@
 import Pingou from '../assets/pingou.png';
 import Keyrupt from '../assets/keyrupt.png';
 import Blokus from '../assets/blokus.png';
-import Soon from '../assets/soon.jpg';
+import Soon from '../assets/soon.png';
 import Migrate from '../assets/migrate.png';
 
 export const data = [
   {
     label: 'Featured Project',
-    title: 'Discoverify',
+    title: 'Tunify',
     details:
-      'Discoverify is a music discovery app to recommend new songs based on your listening history and preferences. Log in with your Spotify account, search for songs or artists, and play them directly in your Spotify app or web player.',
+      'Tunify is a music discovery app to recommend new songs based on your listening history and preferences. Log in with your Spotify account, search for songs or artists, and play them directly in your Spotify app or web player. Coming Soon.',
     technologies: ['React', 'Express', 'Node.js', 'Spotify API'],
     image: Soon,
     imgStart: true,

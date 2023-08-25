@@ -1,5 +1,4 @@
 import React from 'react';
-// import { ChakraProvider } from '@chakra-ui/react';
 import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter as Router } from 'react-router-dom';
 import HeroSection from './components/HeroSection/HeroSection';

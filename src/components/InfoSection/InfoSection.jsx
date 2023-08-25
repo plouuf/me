@@ -76,18 +76,21 @@ const InfoSection = ({ id }) => {
               />
               <InfoText>
                 <br />
-                Implemented features from planning to design to production
-                release, collaborating closely with the business and development
-                team to ensure requirements were met.
+                Quickly adapted to the codebase, becoming proficient in React.js
+                for frontend and Node.js TypeScript with AWS for backend,
+                contributing effectively to feature development.
                 <br />
                 <br />
-                Utilized React for the frontend and Node TypeScript backend with
-                AWS for the implementation, resulting in a highly performant and
-                scalable application.
+                Implemented features, optimizing performance and user
+                experience.
                 <br />
                 <br />
-                Wrote Python scripts as internal tools to automate repetitive
-                tasks and streamline the development process.
+                Collaborated cross-functionally, ensuring a 100% on-time feature
+                delivery rate.
+                <br />
+                <br />
+                Engaged in code reviews and actively learned from peers,
+                fostering improved code quality through shared knowledge.
                 <br />
                 <br />
               </InfoText>
@@ -104,15 +107,15 @@ const InfoSection = ({ id }) => {
               <JobHeader location={'HackfrostNL'} date={'Feb 2021'} />
               <InfoText>
                 <br />
-                Attended, networked and gained experience with new
-                technologies such as Jupyter Notebook, AWS and WebFlows.
+                Attended, networked and gained experience with new technologies
+                such as Jupyter Notebook, AWS and WebFlows.
                 <br />
               </InfoText>
               <JobHeader location={'Avalon Holographics'} date={'May 2019'} />
               <InfoText>
                 <br />
-                Volunteered as test subject to observe how to prevent
-                collision of satellites in 3D.
+                Volunteered as test subject to observe how to prevent collision
+                of satellites in 3D.
                 <br />
               </InfoText>
             </InfoText>

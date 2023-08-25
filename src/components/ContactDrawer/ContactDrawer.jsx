@@ -10,7 +10,6 @@ const ContactDrawer = ({ isOpen, handleDrawer }) => {
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
-    console.log('Received values:', values);
     emailjs
       .send(
         'service_tknw0zb',
@@ -62,7 +61,6 @@ const ContactDrawer = ({ isOpen, handleDrawer }) => {
       >
         <Form.Item
           label={<span style={{ color: '#ffffff', opacity: '75%' }}>Name</span>}
-          // label="Name"
           name="name"
           rules={[{ required: true, message: 'Please enter your name' }]}
           style={{ paddingBottom: '1.5rem' }}
@@ -71,7 +69,6 @@ const ContactDrawer = ({ isOpen, handleDrawer }) => {
         </Form.Item>
 
         <Form.Item
-          // label="Email"
           label={
             <span style={{ color: '#ffffff', opacity: '75%' }}>Email</span>
           }
@@ -92,7 +89,6 @@ const ContactDrawer = ({ isOpen, handleDrawer }) => {
           label={
             <span style={{ color: '#ffffff', opacity: '75%' }}>Message</span>
           }
-          // label="Message"
           name="message"
           rules={[{ required: true, message: 'Please enter a message' }]}
           style={{ paddingBottom: '1.5rem' }}
