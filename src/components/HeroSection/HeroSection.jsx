@@ -24,7 +24,7 @@ const HeroSection = ({ id }) => {
     <HeroContainer id={id}>
       <HeroWrapper>
         <Column1>
-          <HeroImage />
+          <HeroImage rel="preload"/>
         </Column1>
         <Column2>
           <HeroHeader>
