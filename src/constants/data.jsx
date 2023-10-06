@@ -13,8 +13,8 @@ export const data = [
     technologies: ['React', 'Express', 'Node.js', 'Spotify API'],
     image: Soon,
     imgStart: true,
-    // githubRepo: '/',
-    // externalLink: '/'
+    githubRepo: 'https://github.com/plouuf/Tunify',
+    externalLink: 'https://tunify-app.onrender.com/'
   },
   {
     label: 'Featured Project',
