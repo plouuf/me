@@ -14,7 +14,7 @@ export const data = [
     image: Tunify,
     imgStart: true,
     githubRepo: 'https://github.com/plouuf/Tunify',
-    externalLink: 'https://tunify-app.onrender.com/',
+    externalLink: 'https://tunify.cyclic.app/',
   },
   {
     label: 'Featured Project',
