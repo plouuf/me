@@ -3,6 +3,7 @@ import Keyrupt from '../assets/compress/keyrupt.png';
 import Blokus from '../assets/compress/blokus.png';
 import Tunify from '../assets/compress/tunify.png';
 import Migrate from '../assets/compress/migrate.png';
+import QLearning from '../assets/compress/q-learning.png';
 
 export const data = [
   {
@@ -50,12 +51,23 @@ export const data = [
   },
   {
     label: 'Featured Project',
+    title: 'Q-Learning Algorithm',
+    details:
+      'An interactive Q-learning visualizer using HTML and JavaScript to demonstrate the training process of a reinforcement learning agent. This tool will help users understand how Q-values are updated over time as the agent explores and learns from its environment.',
+    technologies: ['JavaScript', 'HTML', 'GUI By Prof. David Churchill'],
+    image: QLearning,
+    imgStart: true,
+    githubRepo:
+      'https://github.com/plouuf/Comp3200/tree/master/Assignment%205',
+  },
+  {
+    label: 'Featured Project',
     title: 'Blokus',
     details:
       'This Java-based board game features an AI opponent and accommodates those with color deficiency vision. It also has a save and load functionality',
     technologies: ['Java'],
     image: Blokus,
-    imgStart: true,
+    imgStart: false,
     githubRepo: 'https://github.com/plouuf/Blokus',
   },
 ];
