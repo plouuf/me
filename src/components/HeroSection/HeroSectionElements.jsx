@@ -5,11 +5,26 @@ import { Link as LinkS } from 'react-scroll';
 export const HeroContainer = styled.section`
   display: flex;
   align-items: flex-start;
-  margin: 0rem 10rem;
+  margin: 0rem 10rem 4rem 10rem;
   position: relative;
   /* background-color: teal; */
   /* height: auto; */
   height: calc(100vh - (5rem + 5rem));
+
+  @media screen and (max-width: 1024px) {
+    margin: 0rem 2rem 3rem 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0rem 1.5rem 3rem 1.5rem;
+    height: auto;
+    min-height: calc(100vh - 5rem);
+    align-items: center;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin: 0rem 1rem 2rem 1rem;
+  }
 `;
 
 export const HeroWrapper = styled.div`
@@ -20,6 +35,16 @@ export const HeroWrapper = styled.div`
   width: 100%;
   margin-top: 2rem;
   /* background-color: blue; */
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'col1'
+      'col2';
+    gap: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
 `;
 
 export const Column1 = styled.div`
@@ -77,8 +102,7 @@ export const HeroHeader = styled.h1`
   &:after {
     width: 0.125em;
     background: gray;
-    animation: typewriter 1.5s steps(25) 0.4s forwards,
-      blink 750ms steps(25) infinite;
+    animation: typewriter 1.5s steps(25) 0.4s forwards, blink 750ms steps(25) infinite;
   }
 
   @keyframes typewriter {
@@ -91,6 +115,17 @@ export const HeroHeader = styled.h1`
     to {
       background: transparent;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 5vh;
+    font-size: 1.8rem;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
   }
 `;
 
@@ -163,6 +198,16 @@ export const HeroText = styled.p`
       transform: translateY(0);
     }
   }
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 export const HeroImage = styled.div`
@@ -194,6 +239,23 @@ export const HeroImage = styled.div`
     to {
       opacity: 100%;
     }
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 400px;
+    height: 360px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 300px;
+    height: 270px;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 250px;
+    height: 225px;
   }
 `;
 
@@ -227,5 +289,15 @@ export const HeroButton = styled(LinkS)`
       opacity: 80%;
       transform: translateY(0);
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 2rem auto;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 9rem;
+    font-size: 0.85rem;
+    padding: 10px 20px;
   }
 `;

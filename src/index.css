@@ -9,4 +9,22 @@
 body {
   background-color: #242424;
   color: #fff;
+  overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+}
+
+/* Ensure images and media are responsive by default */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve touch targets on mobile */
+@media screen and (max-width: 768px) {
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }

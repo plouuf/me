@@ -14,6 +14,14 @@ export const FooterWrapper = styled.div`
   align-items: center;
   max-width: 1100px;
   margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    padding: 32px 20px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 24px 16px;
+  }
 `;
 
 export const FooterLogo = styled(Link)`
@@ -38,6 +46,13 @@ export const FooterAuthor = styled.p`
   word-spacing: 0.1rem;
   font-size: 0.95rem;
   margin-bottom: 1rem;
+  text-align: center;
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 export const BeatingHeart = styled(AiFillHeart)`

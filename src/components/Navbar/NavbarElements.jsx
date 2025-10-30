@@ -12,14 +12,21 @@ export const NavContainer = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-  background: ${({ isScroll }) =>
-    isScroll ? 'rgba(36,36,36,0.75)' : 'rgba(36,36,36,0.15)'};
+  background: ${({ isScroll }) => (isScroll ? 'rgba(36,36,36,0.75)' : 'rgba(36,36,36,0.15)')};
   backdrop-filter: blur(25px);
   /* background-color: #242424; */
   transition: 0.8s all ease-in;
 
   @media screen and (max-width: 1024px) {
     padding: 0.5rem 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem 1.5rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 0.5rem 1rem;
   }
 `;
 
@@ -34,6 +41,14 @@ export const NavLogoLink = styled(LinkS)`
   font-size: 1.8rem;
   letter-spacing: 0.8px;
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.3rem;
+  }
 `;
 
 export const NavLink = styled(LinkS)`

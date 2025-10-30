@@ -7,7 +7,7 @@ export const ProjectContainer = styled.div`
 
 export const Project = styled.div`
   margin: 30px;
-  margin-bottom: 8rem;
+  margin-bottom: 10rem;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
@@ -15,7 +15,17 @@ export const Project = styled.div`
   align-items: center;
 
   @media screen and (max-width: 768px) {
-    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    margin-bottom: 5rem;
+    gap: 2rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin: 15px 0;
+    margin-bottom: 4rem;
   }
 `;
 
@@ -26,6 +36,14 @@ export const ProjectContent = styled.div`
   grid-row: 1 / -1;
   z-index: 1;
   text-align: ${({ imgStart }) => (imgStart ? `right` : `left`)};
+
+  @media screen and (max-width: 768px) {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    text-align: center;
+    order: 2;
+    width: 100%;
+  }
 `;
 
 export const ProjectLabel = styled.div`
@@ -37,18 +55,42 @@ export const ProjectTitle = styled.h4`
   font-size: 2rem;
   margin: 10px 0 30px;
   color: #eee;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+    margin: 10px 0 20px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.3rem;
+  }
 `;
 
 export const ProjectDetailsContainer = styled.div`
   font-size: 0.94rem;
   line-height: 1.5;
   color: #aaa;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
 `;
 
 export const ProjectDetails = styled.p`
   background-color: #1a1a1a;
   padding: 20px 25px;
   text-align: ${({ imgStart }) => (imgStart ? `right` : `left`)};
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 12px 15px;
+    font-size: 0.85rem;
+  }
 `;
 
 export const ProjectList = styled.ul`
@@ -58,6 +100,14 @@ export const ProjectList = styled.ul`
   padding: 0;
   list-style: none;
   justify-content: ${({ imgStart }) => (imgStart ? `flex-end` : `flex-start`)};
+
+  @media screen and (max-width: 768px) {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 0;
+    flex: 1;
+  }
 `;
 
 export const ProjectListItem = styled.li`
@@ -67,6 +117,11 @@ export const ProjectListItem = styled.li`
   opacity: 75%;
   font-family: monospace;
   font-size: 0.85rem;
+
+  @media screen and (max-width: 768px) {
+    margin: 5px 15px 5px 0;
+    font-size: 0.8rem;
+  }
 `;
 
 export const ProjectImageContainer = styled.div`
@@ -82,8 +137,21 @@ export const ProjectImageContainer = styled.div`
   width: 34rem;
   height: 22rem;
 
+  @media screen and (max-width: 1024px) {
+    width: 28rem;
+    height: 18rem;
+  }
+
   @media screen and (max-width: 768px) {
-    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    order: 1;
+    grid-column: 1 / -1;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 200px;
   }
 
   &:hover {
@@ -102,11 +170,11 @@ export const ProjectImage = styled.img`
   /* filter: grayscale(75%) contrast(1); */
   mix-blend-mode: multiply;
   transition: 0.15s ease-in;
-  /* object-fit: cover; */
+  object-fit: cover;
 
   @media screen and (max-width: 768px) {
     object-fit: cover;
-    width: auto;
+    width: 100%;
     height: 100%;
   }
 
@@ -122,4 +190,20 @@ export const ProjectIconContainer = styled.div`
   gap: 1rem;
   margin-top: 1rem;
   font-size: 1.2rem;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+`;
+
+export const ProjectBottomContainer = styled.div`
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
 `;

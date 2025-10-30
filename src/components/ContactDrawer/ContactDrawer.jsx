@@ -38,20 +38,16 @@ const ContactDrawer = ({ isOpen, handleDrawer }) => {
 
   return (
     <Drawer
-      title={
-        <p style={{ color: '#ffffff', fontWeight: 600, opacity: '90%' }}>
-          Contact Me
-        </p>
-      }
-      placement="right"
+      title={<p style={{ color: '#ffffff', fontWeight: 600, opacity: '90%' }}>Contact Me</p>}
+      placement='right'
       onClose={handleDrawer}
       open={isOpen}
       style={{ background: '#282828', color: '#ffffff' }}
-      width={450}
+      width={window.innerWidth < 768 ? '100%' : 450}
       closeIcon={<CloseOutlined style={{ color: '#fff' }} />}
     >
       <ContactImageWrapper>
-        <ContactImage src={ContactImageSVG} alt="contact" />
+        <ContactImage src={ContactImageSVG} alt='contact' />
       </ContactImageWrapper>
       <Form
         form={form}
@@ -61,18 +57,18 @@ const ContactDrawer = ({ isOpen, handleDrawer }) => {
       >
         <Form.Item
           label={<span style={{ color: '#ffffff', opacity: '75%' }}>Name</span>}
-          name="name"
+          name='name'
           rules={[{ required: true, message: 'Please enter your name' }]}
           style={{ paddingBottom: '1.5rem' }}
+          labelCol={window.innerWidth < 768 ? { span: 24 } : { span: 5 }}
+          wrapperCol={window.innerWidth < 768 ? { span: 24 } : { span: 19 }}
         >
           <Input />
         </Form.Item>
 
         <Form.Item
-          label={
-            <span style={{ color: '#ffffff', opacity: '75%' }}>Email</span>
-          }
-          name="email"
+          label={<span style={{ color: '#ffffff', opacity: '75%' }}>Email</span>}
+          name='email'
           rules={[
             {
               type: 'email',
@@ -81,23 +77,27 @@ const ContactDrawer = ({ isOpen, handleDrawer }) => {
             },
           ]}
           style={{ paddingBottom: '1.5rem' }}
+          labelCol={window.innerWidth < 768 ? { span: 24 } : { span: 5 }}
+          wrapperCol={window.innerWidth < 768 ? { span: 24 } : { span: 19 }}
         >
           <Input />
         </Form.Item>
 
         <Form.Item
-          label={
-            <span style={{ color: '#ffffff', opacity: '75%' }}>Message</span>
-          }
-          name="message"
+          label={<span style={{ color: '#ffffff', opacity: '75%' }}>Message</span>}
+          name='message'
           rules={[{ required: true, message: 'Please enter a message' }]}
           style={{ paddingBottom: '1.5rem' }}
+          labelCol={window.innerWidth < 768 ? { span: 24 } : { span: 5 }}
+          wrapperCol={window.innerWidth < 768 ? { span: 24 } : { span: 19 }}
         >
           <Input.TextArea rows={4} />
         </Form.Item>
 
-        <Form.Item wrapperCol={{ offset: 5, span: 16 }}>
-          <DrawerSubmit htmlType="submit">Send</DrawerSubmit>
+        <Form.Item wrapperCol={window.innerWidth < 768 ? { span: 24 } : { offset: 5, span: 16 }}>
+          <DrawerSubmit htmlType='submit' style={{ width: window.innerWidth < 768 ? '100%' : 'auto' }}>
+            Send
+          </DrawerSubmit>
         </Form.Item>
       </Form>
     </Drawer>

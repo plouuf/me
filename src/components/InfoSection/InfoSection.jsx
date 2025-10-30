@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { scroller } from 'react-scroll';
 import {
   InfoContainer,
   InfoText,
@@ -18,6 +19,22 @@ const InfoSection = ({ id }) => {
   const [active, setActive] = useState(ABOUT);
 
   const setTab = (tab) => {
+    // Responsive offset based on screen size for smooth scrolling
+    const getOffset = () => {
+      if (window.innerWidth <= 480) return -80; // Small mobile
+      if (window.innerWidth <= 768) return -90; // Mobile
+      if (window.innerWidth <= 1024) return -100; // Tablet
+      return -120; // Desktop
+    };
+
+    // Scroll to the About section smoothly
+    scroller.scrollTo('about', {
+      duration: 500,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+      offset: getOffset(),
+    });
+
     switch (tab) {
       case ABOUT:
         setActive(ABOUT);
@@ -45,17 +62,15 @@ const InfoSection = ({ id }) => {
           {active === ABOUT && (
             <>
               <InfoText>
-                I have recently completed my studies at Memorial University of
-                Newfoundland, where I majored in Computer Science. I have a huge
-                interest for Web Development, Cyber Security and AI. I also love
-                space and penguins.
+                I graduated in 2023 from Memorial University of Newfoundland with a degree in Computer Science. Since then, I've been
+                working as a software developer, gaining valuable experience in full-stack development and building production-ready
+                applications. I have a huge passion for Web Development, Cyber Security, and AI. I also love space and penguins.
                 <br />
-                <br /> I am enthusiastic with attention to detail and excellent
-                organizational skills. Motivated to learn, grow and excel in the
-                software industry.
+                <br /> I am a detail-oriented developer with excellent problem-solving skills and a strong foundation in modern web
+                technologies. I'm always eager to learn new technologies and take on challenging projects that push me to grow as a
+                developer.
                 <br />
-                <br /> Here are some of the technologies I've been working with
-                recently:
+                <br /> Here are some of the technologies I've been working with recently:
               </InfoText>
               <InfoList>
                 <InfoListItem>JavaScript / TypeScript</InfoListItem>
@@ -69,28 +84,39 @@ const InfoSection = ({ id }) => {
           )}
           {active === EXPERIENCE && (
             <>
-              <JobHeader
-                job={'Full Stack Developer (Co-op)'}
-                location={'totaliQ'}
-                date={'Sept 2021 - Apr 2022'}
-              />
+              <JobHeader job={'Software Developer'} location={'Final POS (Start-up)'} date={'2024 - Present'} />
               <InfoText>
                 <br />
-                Quickly adapted to the codebase, becoming proficient in React.js
-                for frontend and Node.js TypeScript with AWS for backend,
+                Led end-to-end development and ownership of the POS system powering both web and mobile platforms, ensuring seamless
+                performance, scalability, and cross-device consistency.
+                <br />
+                <br />
+                Integrated UI/UX designs into production-ready React applications, transforming static layouts into dynamic, interactive
+                components with real-time data and multi-step workflows.
+                <br />
+                <br />
+                Implemented and optimized core POS features including order creation, refunds, product search, and payment workflows for a
+                robust, business-critical solution.
+                <br />
+                <br />
+                Collaborated with cross-functional teams to align technical delivery with business goals, driving continuous improvement and
+                feature innovation.
+                <br />
+                <br />
+              </InfoText>
+
+              <JobHeader job={'Full Stack Developer (Co-op)'} location={'totaliQ (Start-up)'} date={'Sept 2021 - Apr 2022'} />
+              <InfoText>
+                <br />
+                Quickly adapted to the codebase, becoming proficient in React.js for frontend and Node.js TypeScript with AWS for backend,
                 contributing effectively to feature development.
                 <br />
                 <br />
-                Implemented features, optimizing performance and user
-                experience.
+                Delivered new features and performance optimizations, enhancing overall usability and reliability of the platform.
                 <br />
                 <br />
-                Collaborated cross-functionally, ensuring a 100% on-time feature
-                delivery rate.
-                <br />
-                <br />
-                Engaged in code reviews and actively learned from peers,
-                fostering improved code quality through shared knowledge.
+                Collaborated in code reviews and agile sprints, strengthening code quality and accelerating team delivery while learning
+                from experienced developers.
                 <br />
                 <br />
               </InfoText>
@@ -107,15 +133,13 @@ const InfoSection = ({ id }) => {
               <JobHeader location={'HackfrostNL'} date={'Feb 2021'} />
               <InfoText>
                 <br />
-                Attended, networked and gained experience with new technologies
-                such as Jupyter Notebook, AWS and WebFlows.
+                Attended, networked and gained experience with new technologies such as Jupyter Notebook, AWS and WebFlows.
                 <br />
               </InfoText>
               <JobHeader location={'Avalon Holographics'} date={'May 2019'} />
               <InfoText>
                 <br />
-                Volunteered as test subject to observe how to prevent collision
-                of satellites in 3D.
+                Volunteered as test subject to observe how to prevent collision of satellites in 3D.
                 <br />
               </InfoText>
             </InfoText>
