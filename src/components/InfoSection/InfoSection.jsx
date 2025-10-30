@@ -87,7 +87,7 @@ const InfoSection = ({ id }) => {
               <JobHeader job={'Software Developer'} location={'Final POS (Start-up)'} date={'2024 - Present'} />
               <InfoText>
                 <br />
-                Led end-to-end development and ownership of the POS system powering both web and mobile platforms, ensuring seamless
+                Drove end-to-end development and ownership of the POS system powering both web and mobile platforms, ensuring seamless
                 performance, scalability, and cross-device consistency.
                 <br />
                 <br />
