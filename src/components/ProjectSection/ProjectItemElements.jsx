@@ -33,7 +33,7 @@ export const ProjectContent = styled.div`
   position: relative;
   grid-column: ${({ imgStart }) => (imgStart ? `7 / -1` : `1 / 7`)};
   /* grid-column: 1 / 7; //change to 6 / -1 */
-  grid-row: 1 / -1;
+  grid-row: 1 / 3;
   z-index: 1;
   text-align: ${({ imgStart }) => (imgStart ? `right` : `left`)};
 
@@ -41,7 +41,7 @@ export const ProjectContent = styled.div`
     grid-column: 1 / -1;
     grid-row: auto;
     text-align: center;
-    order: 2;
+    order: 1;
     width: 100%;
   }
 `;
@@ -67,11 +67,21 @@ export const ProjectTitle = styled.h4`
 `;
 
 export const ProjectDetailsContainer = styled.div`
+  position: relative;
+  grid-column: ${({ imgStart }) => (imgStart ? `7 / -1` : `1 / 7`)};
+  grid-row: 3 / -1;
+  z-index: 1;
+  text-align: ${({ imgStart }) => (imgStart ? `right` : `left`)};
   font-size: 0.94rem;
   line-height: 1.5;
   color: #aaa;
 
   @media screen and (max-width: 768px) {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    text-align: center;
+    order: 3;
+    width: 100%;
     font-size: 0.9rem;
     line-height: 1.6;
   }
@@ -146,7 +156,7 @@ export const ProjectImageContainer = styled.div`
     width: 100%;
     max-width: 500px;
     height: 300px;
-    order: 1;
+    order: 2;
     grid-column: 1 / -1;
   }
 
